@@ -1,14 +1,13 @@
 import { useEffect } from 'react';
 
-import { getExchangeRates } from './lib'
+import { useExchangeRates } from './lib'
 
 const ExchangeRateScreen = () => {
-    // TODO - for testing, remove this.
+    const {data: exchangeRates, isLoading, isFetching} = useExchangeRates();
+
     useEffect(() => {
-        getExchangeRates()
-        .then(text => console.log(text))
-        .catch(err => console.log(err));
-    }, [])
+        console.log(exchangeRates);
+    }, [exchangeRates])
 
     return(
         <p className="read-the-docs">
