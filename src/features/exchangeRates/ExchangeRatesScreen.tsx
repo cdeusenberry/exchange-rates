@@ -1,7 +1,6 @@
-import { useEffect } from 'react';
-
 import { useExchangeRates } from './lib'
 import ExchangeRatesDisplay from './components/ExchangeRatesDisplay';
+import CurrencyConverter from './components/CurrencyConverter';
 
 const ExchangeRateScreen = () => {
     const {data: exchangeRates, isFetching} = useExchangeRates();
@@ -29,6 +28,7 @@ const ExchangeRateScreen = () => {
     return(
         <div className="App">
             <ExchangeRatesDisplay exchangeRates={exchangeRates} />
+            <CurrencyConverter exchangeRates={exchangeRates} />
         </div>
     )
 }

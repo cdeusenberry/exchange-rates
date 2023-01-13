@@ -15,11 +15,11 @@ const ExchangeRatesDisplay = ({exchangeRates}: {exchangeRates: ExchangeRate[]}) 
 const Header = () => {
     return (
         <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', padding: 10}}>
-            <div>Country</div>
-            <div>Currency</div>
-            <div>Amount</div>
-            <div>Code</div>
-            <div>Rate</div>
+            <div style={{width: '100px'}}>Country</div>
+            <div style={{width: '100px'}}>Currency</div>
+            <div style={{width: '100px'}}>Amount</div>
+            <div style={{width: '100px'}}>Code</div>
+            <div style={{width: '100px'}}>Rate</div>
         </div>
     )
 }
@@ -27,11 +27,11 @@ const Header = () => {
 const ExchangeRateItem = ({exchangeRate}: {exchangeRate: ExchangeRate}) => {
     return (
         <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', padding: 5}}>
-            <div>{exchangeRate.country}</div>
-            <div>{exchangeRate.currency}</div>
-            <div>{exchangeRate.amount}</div>
-            <div>{exchangeRate.code}</div>
-            <div>{exchangeRate.rate}</div>
+            <div style={{width: '100px'}}>{exchangeRate.country}</div>
+            <div style={{width: '100px'}}>{exchangeRate.currency}</div>
+            <div style={{width: '100px'}}>{exchangeRate.amount}</div>
+            <div style={{width: '100px'}}>{exchangeRate.code}</div>
+            <div style={{width: '100px'}}>{exchangeRate.rate}</div>
         </div>
     )
 }
