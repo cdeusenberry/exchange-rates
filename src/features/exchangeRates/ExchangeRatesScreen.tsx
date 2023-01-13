@@ -1,18 +1,35 @@
 import { useEffect } from 'react';
 
 import { useExchangeRates } from './lib'
+import ExchangeRatesDisplay from './components/ExchangeRatesDisplay';
 
 const ExchangeRateScreen = () => {
-    const {data: exchangeRates, isLoading, isFetching} = useExchangeRates();
+    const {data: exchangeRates, isFetching} = useExchangeRates();
 
-    useEffect(() => {
-        console.log(exchangeRates);
-    }, [exchangeRates])
+    // useEffect(() => {
+    //     console.log(exchangeRates);
+    // }, [exchangeRates])
+
+    if (isFetching) {
+        return (
+            <p className="read-the-docs">
+                Fetching Data!
+            </p>
+        )
+    }
+
+    if (!exchangeRates) {
+        return (
+            <p className="read-the-docs">
+                No Exchange Rates!
+            </p>
+        )
+    }
 
     return(
-        <p className="read-the-docs">
-        Start of Czech Exchange Rate app.
-      </p>
+        <div className="App">
+            <ExchangeRatesDisplay exchangeRates={exchangeRates} />
+        </div>
     )
 }
 
