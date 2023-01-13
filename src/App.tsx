@@ -1,15 +1,14 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import { ExchangeRatesScreen } from './features'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <p className="read-the-docs">
-        Start of Czech Exchange Rate app.
-      </p>
+      <ExchangeRatesScreen />
     </div>
   )
 }
