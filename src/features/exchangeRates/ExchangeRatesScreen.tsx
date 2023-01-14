@@ -1,6 +1,6 @@
-import { useExchangeRates } from './lib'
-import ExchangeRatesDisplay from './components/ExchangeRatesDisplay';
-import CurrencyConverter from './components/CurrencyConverter';
+import { useExchangeRates } from "./lib"
+import ExchangeRatesDisplay from "./components/ExchangeRatesDisplay";
+import CurrencyConverter from "./components/CurrencyConverter";
 
 const ExchangeRateScreen = () => {
     const {data: exchangeRates, isFetching} = useExchangeRates();
@@ -27,7 +27,7 @@ const ExchangeRateScreen = () => {
 
     return(
         <div className="flex justify-center p-4">
-            <div className="flex-col max-w-fit justify-center space-y-2 rounded bg-gray-300 p-2">
+            <div className="flex-col max-w-fit justify-center space-y-2 rounded bg-gray-300 p-2 shadow-md">
                 <ExchangeRatesDisplay exchangeRates={exchangeRates} />
                 <CurrencyConverter exchangeRates={exchangeRates} />
             </div>

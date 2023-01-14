@@ -1,4 +1,4 @@
-import { ExchangeRate } from '../lib'
+import { ExchangeRate } from "../lib"
 
 const ExchangeRatesDisplay = ({exchangeRates}: {exchangeRates: ExchangeRate[]}) => {
     return(

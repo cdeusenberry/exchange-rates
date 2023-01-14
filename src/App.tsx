@@ -1,4 +1,4 @@
-import { ExchangeRatesScreen } from './features'
+import { ExchangeRatesScreen } from "./features"
 
 function App() {
   return (
