@@ -11,7 +11,7 @@ const ExchangeRateScreen = () => {
 
     if (isFetching) {
         return (
-            <p className="read-the-docs">
+            <p>
                 Fetching Data!
             </p>
         )
@@ -19,16 +19,18 @@ const ExchangeRateScreen = () => {
 
     if (!exchangeRates) {
         return (
-            <p className="read-the-docs">
+            <p>
                 No Exchange Rates!
             </p>
         )
     }
 
     return(
-        <div className="App">
-            <ExchangeRatesDisplay exchangeRates={exchangeRates} />
-            <CurrencyConverter exchangeRates={exchangeRates} />
+        <div className="flex justify-center p-4">
+            <div className="flex-col max-w-fit justify-center space-y-2 rounded bg-gray-300 p-2">
+                <ExchangeRatesDisplay exchangeRates={exchangeRates} />
+                <CurrencyConverter exchangeRates={exchangeRates} />
+            </div>
         </div>
     )
 }
