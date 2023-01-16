@@ -5,10 +5,6 @@ import CurrencyConverter from "./components/CurrencyConverter";
 const ExchangeRateScreen = () => {
     const {data: exchangeRates, isFetching} = useExchangeRates();
 
-    // useEffect(() => {
-    //     console.log(exchangeRates);
-    // }, [exchangeRates])
-
     if (isFetching) {
         return (
             <p>
